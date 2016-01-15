@@ -1,0 +1,89 @@
+*{margin: 0px;padding: 0px;}
+		*{font-family:"微软雅黑";}
+		a{text-decoration: none;}
+		a:hover{text-decoration: underline;}
+		.mainwrapper{position: relative;}
+		.main{width: 1208px;margin: 0 auto;}
+		.barwrapper{width: 100%;height: 36px;background-color: rgb(243,243,243);font-size: 12px;}
+		.messgaebar{width: 1208px;height: 36px;margin: 0 auto;line-height: 22px;padding-top: 7px;}
+		.see{color: red;}
+		.close{font-size: 16px;margin-right: 3px;}
+		.bar_close{text-align: right;float: right;}
+		.logo{height:90px;line-height: 90px;}
+		.logo_logo{display:block;width:100px;height: 22px;background-color: #000000;background-image: url(img/logo.png);background-position: 0 0;float: left;}
+		.title{font-size: 22px;font-family: "arial black";font-weight:bolder;}
+		.focus,.fans,.fansnum{font-size: 12px;color: #666666;}
+		.list{font-size: 16px;color: #666666;float: right;margin-left:55px ;}
+		.list a{color: #666666;}
+		.show_pic{height: 461px;position: relative;}
+		.lunbo{width:100%;height: 461px;position: absolute;top:126px;left: 0px;}
+		.lunbo img{width: 100%;height: 461px;}
+		.point_wrapper{width: 100px;height: 10px;position: absolute;bottom: 17px;left: 900px;}
+		.point span{display: block;width: 10px;height: 10px;background-color: white;border-radius: 5px;float: left;margin-left: 10px;cursor: pointer;}
+		.point span.select{background-color: black;}
+		.three_product{
+			width: 100%;
+			height: 297px;
+			
+		}
+		.one_warpper{
+			width: 402px;
+			height: 297px;
+			float: left;
+			/*background-color: red;*/
+		}
+		.one{
+			width: 286px;
+			float: right;
+			margin-top: 66px;
+			position: relative;
+		}
+		.detail{font-family: "微软雅黑";font-size: 14px;line-height: 24px;color: #666666;}
+		.product{position: absolute;top:13px;left: -103px;}
+		.goto{margin-top: 24px;display: block;}
+		.goto a{text-decoration: none;color: red;font-size: 14px;}
+		.workcondition_wrapper{width: 100%;height: 220px;position: absolute;
+		top:884px;left: 0px;
+		text-align: center;
+		}
+		.workcondition_wrapper img{width: 19%;height: 220px;float: left;margin-right: 1%;}
+		.workcondition{
+			width: 100%;height: 220px;
+		}
+		.img_wrapper{margin: 0 auto;}
+		.course{
+			width: 988px;
+			float: left;	
+		}
+		.coure_wrapper{background-color: rgb(248,248,248);position: absolute;top:1103px;left: 0px;width: 100%;}
+		.course_rightbar_wrapper{width: 1208px;margin: 0 auto;}
+		.chanpingsheji,.bianchengyuyan{display: block;width: 200px;height: 50px;
+		float: left;}
+		.clear{clear:both; height: 0; line-height: 0; font-size: 0}
+		.tab{margin-bottom: 30px;margin-top: 81px;}
+		.tab a{color: #666666;font-family: "微软雅黑";font-size: 20px;display: block;height: 50px;line-height: 50px;text-align: center;
+		background-image: url(../img/course_tab.png);background-position: -201px 0px;
+		}
+		.tab a.tab_select{background-image: url(../img/course_tab.png);background-position: 0px 0px;color: white;}
+		.course_detail{font-size: 12px;}
+		.num{width: 38px;border: 1px solid #666666;font-size: 12px;color: #666666;text-align: center;}
+		.price{font-size: 12px;color: #666666;padding: 2px;}
+		.singlecourse{background-color: white;width: 225px;padding: 1px;margin: 0px 20px 20px 0px;
+		float: left;
+		}
+		.produce_wrapper{float: left;width: 220px;margin-top: 84px;}
+		.produce{height: 56px;font-size: 16px;line-height: 56px;padding-left: 26px;border-bottom: 1px solid #666666;}
+		.video_detail{font-size: 14px;color: #666666;}
+		.showvideo{padding: 20px;margin-bottom: 20px;}
+		.hot{height: 600px;margin-top: 20px;background-color: white;}
+		.two{background-color: white;}
+		.singledetail{position: relative;margin: 20px 20px 40px 90px;}
+		.singledetail img{position: absolute;top:0px;left: -70px;}
+		.hot_title{font-size: 14px;}
+		.hot_num{font-size: 14px;color: #666666;}
+		.footer{width: 100%;height: 262px;background-color: #2c3339;color: #666666;font-size: 12.5px;padding-top: 90px;}
+		.footer a{color: #666666;text-decoration: none;padding-bottom: 10px;display: block;}
+		.footer_main{width: 1208px;margin: 0 auto;}
+		.footer_main .big{float: left;}
+		.footertitle{margin-bottom: 10px;}
+		.company,.lianjie,.we,.more{width:210px;margin: 32px;}
