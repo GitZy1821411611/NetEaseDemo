@@ -7,7 +7,7 @@
 		.barwrapper{width: 100%;height: 36px;background-color: rgb(243,243,243);font-size: 12px;}
 		.messgaebar{width: 1208px;height: 36px;margin: 0 auto;line-height: 22px;padding-top: 7px;}
 		.see{color: red;}
-		.close{font-size: 16px;margin-right: 3px;}
+		.close{display:inline-block;width: 24px;height: 24px;background-image:url(../img/closebar.png);vertical-align:middle;background-position: -2px -5px;}
 		.bar_close{text-align: right;float: right;}
 		.logo{height:90px;line-height: 90px;}
 		.logo_logo{display:block;width:100px;height: 22px;background-color: #000000;background-image: url(img/logo.png);background-position: 0 0;float: left;}
@@ -18,7 +18,8 @@
 		.show_pic{height: 461px;position: relative;}
 		.lunbo{width:100%;height: 461px;position: absolute;top:126px;left: 0px;}
 		.lunbo img{width: 100%;height: 461px;}
-		.point_wrapper{width: 100px;height: 10px;position: absolute;bottom: 17px;left: 900px;}
+		.point_wrapper{width: 100%;height: 10px;position: absolute;bottom: 17px;}
+		.point{width: 100px;margin: 0 auto;}
 		.point span{display: block;width: 10px;height: 10px;background-color: white;border-radius: 5px;float: left;margin-left: 10px;cursor: pointer;}
 		.point span.select{background-color: black;}
 		.three_product{
