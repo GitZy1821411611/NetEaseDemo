@@ -16,8 +16,9 @@
 		.list{font-size: 16px;color: #666666;float: right;margin-left:55px ;}
 		.list a{color: #666666;}
 		.show_pic{height: 461px;position: relative;}
-		.lunbo{width:100%;height: 461px;position: absolute;top:126px;left: 0px;}
-		.lunbo img{width: 100%;height: 461px;}
+		.lunbo{width:100%;height: 461px;position: absolute;top:126px;left: 0px;overflow: hidden;}
+		.lunbo img{width: 100%;height: 461px;float: left;}
+		.lunbo_img_wrapper{position: absolute;top:0px;left: 0px;width: 300%}
 		.point_wrapper{width: 100%;height: 10px;position: absolute;bottom: 17px;}
 		.point{width: 100px;margin: 0 auto;}
 		.point span{display: block;width: 10px;height: 10px;background-color: white;border-radius: 5px;float: left;margin-left: 10px;cursor: pointer;}
