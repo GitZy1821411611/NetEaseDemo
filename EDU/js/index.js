@@ -15,8 +15,7 @@ $(function(){
 		if(parseInt($(".lunbo_img_wrapper").css("left"))==-2*imgwidth){
 			$(".lunbo_img_wrapper").css({"left":"0px"});
 		}else{
-			$(".lunbo_img_wrapper").css({"left":"-="+imgwidth});
-		}
+			$(".lunbo_img_wrapper").css({"left":"-="+imgwidth});		}
 		var point_index=temp%3;
 		var point=$(".point span");
 		$(point[point_index]).addClass('select');
@@ -41,4 +40,12 @@ $(function(){
 	// 	}
 
 	// })
+	// 根据浏览器可视宽度调整数据列数
+	if(parseInt(imgwidth)>1800){
+		$(".course").css({"width":"988px"});
+	}else{
+		$(".course").css({"width":"752px"});
+		$(".course_center").css({"width":"972px","margin":"0 auto"});
+	}
 })
+

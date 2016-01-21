@@ -18,7 +18,7 @@
 		.show_pic{height: 461px;position: relative;}
 		.lunbo{width:100%;height: 461px;position: absolute;top:126px;left: 0px;overflow: hidden;}
 		.lunbo img{width: 100%;height: 461px;float: left;}
-		.lunbo_img_wrapper{position: absolute;top:0px;left: 0px;width: 500%}
+		.lunbo_img_wrapper{position: absolute;top:0px;left: 0px;width: 500%;}
 		.point_wrapper{width: 100%;height: 10px;position: absolute;bottom: 17px;}
 		.point{width: 100px;margin: 0 auto;}
 		.point span{display: block;width: 10px;height: 10px;background-color: white;border-radius: 5px;float: left;margin-left: 10px;cursor: pointer;}
@@ -58,6 +58,7 @@
 			float: left;	
 		}
 		.coure_wrapper{background-color: rgb(248,248,248);position: absolute;top:1103px;left: 0px;width: 100%;}
+		
 		.course_rightbar_wrapper{width: 1208px;margin: 0 auto;}
 		.chanpingsheji,.bianchengyuyan{display: block;width: 200px;height: 50px;
 		float: left;}
