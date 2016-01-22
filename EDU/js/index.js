@@ -4,6 +4,10 @@ $(function(){
 	$("#close_topbar").click(function(){
 		$(".barwrapper").slideUp();
 	})
+	// 5s后自动关闭
+	setTimeout(function(){
+		$(".barwrapper").slideUp();
+	},2000)
 	//轮播代码
 	//获取窗口可视化宽度
 	var imgwidth=$(window).width();
