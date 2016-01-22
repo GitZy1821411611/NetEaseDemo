@@ -46,5 +46,43 @@ $(function(){
 		$(".course").css({"width":"752px"});
 		$(".course_center").css({"width":"972px","margin":"0 auto"});
 	}
+	// 右侧导航栏动画
+	$(".leftbar ul li a").hover(function(){
+		if($(this).attr("class")=="a_top"){
+			$(this).animate({"background-position-x":"-50px","background-position-y":"0px"})
+		}else if($(this).attr("class")=="a_mail"){
+			$(this).animate({"background-position-x":"-50px","background-position-y":"-50px"})
+		}
+		else if($(this).attr("class")=="a_qq"){
+			$(this).animate({"background-position-x":"-50px","background-position-y":"-100px"})
+		}else{
+			$(this).animate({"background-position-x":"-50px","background-position-y":"-150px"})
+		}
+	},function(){
+		if($(this).attr("class")=="a_top"){
+			$(this).animate({"background-position-x":"0px","background-position-y":"0px"})
+		}else if($(this).attr("class")=="a_mail"){
+			$(this).animate({"background-position-x":"0px","background-position-y":"-50px"})
+		}
+		else if($(this).attr("class")=="a_qq"){
+			$(this).animate({"background-position-x":"0px","background-position-y":"-100px"})
+		}else{
+			$(this).animate({"background-position-x":"0px","background-position-y":"-150px"})
+		}
+	}).click(function() {
+		/* Act on the event */
+		if($(this).attr("class")=="a_top"){
+			$("body").animate({scrollTop:"0px"});
+		}
+	});
+	//
+	$(window).scroll(function(){
+	if(parseInt($("body").scrollTop())>1200){
+		$(".leftbar").show();
+	}else{
+		$(".leftbar").hide();
+	}
+	})
+	
 })
 
