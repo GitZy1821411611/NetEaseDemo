@@ -3,7 +3,6 @@ $(function(){
 	//关闭头部提醒区域
 	$("#close_topbar").click(function(){
 		$(".barwrapper").slideUp();
-		$(".lunbo").animate({top:"90px"});
 	})
 	//轮播代码
 	//获取窗口可视化宽度
