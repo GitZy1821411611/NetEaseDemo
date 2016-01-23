@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>3种常用网站图片轮播切换代码 - 站长素材</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <!--Luara样式文件-->
+    <!--渐隐样式-->
+    <link rel="stylesheet" href="css/luara.css"/>
+    <!--左滑样式-->
+    <link rel="stylesheet" href="css/luara.left.css"/>
+    <!--上滑样式-->
+    <link rel="stylesheet" href="css/luara.top.css"/>
+
+</head>
+<body>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <!--Luara js文件-->
+    <script src="js/jquery.luara.0.0.1.min.js"></script>
+
+    <h5>渐隐</h5>
+    <hr/>
+    <!--Luara图片切换骨架begin-->
+    <div class="example">
+        <ul>
+            <li><img src="images/1.jpg" alt="1"/></li>
+            <li><img src="images/2.jpg" alt="2"/></li>
+            <li><img src="images/3.jpg" alt="3"/></li>
+            <li><img src="images/4.jpg" alt="4"/></li>
+        </ul>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <!--Luara图片切换骨架end-->
+    <script>
+    $(function(){
+        <!--调用Luara示例-->
+        $(".example").luara({width:"500",height:"334",interval:4000,selected:"seleted"});
+
+    });
+    </script>
+
+    <h5>上滑</h5>
+    <hr/>
+    <!--Luara图片切换骨架begin-->
+    <div class="example1">
+        <ul>
+            <li><img src="images/1.jpg" alt="1"/></li>
+            <li><img src="images/2.jpg" alt="2"/></li>
+            <li><img src="images/3.jpg" alt="3"/></li>
+            <li><img src="images/4.jpg" alt="4"/></li>
+        </ul>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <!--Luara图片切换骨架end-->
+    <script>
+        $(function(){
+            <!--调用Luara示例-->
+            $(".example1").luara({width:"500",height:"334",interval:5000,selected:"seleted",deriction:"top"});
+
+        });
+    </script>
+
+
+    <h5>左滑</h5>
+    <hr/>
+    <!--Luara图片切换骨架begin-->
+    <div class="example2">
+        <ul>
+            <li><img src="images/1.jpg" alt="1"/></li>
+            <li><img src="images/2.jpg" alt="2"/></li>
+            <li><img src="images/3.jpg" alt="3"/></li>
+            <li><img src="images/4.jpg" alt="4"/></li>
+        </ul>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <!--Luara图片切换骨架end-->
+    <script>
+        $(function(){
+            <!--调用Luara示例-->
+            $(".example2").luara({width:"500",height:"334",interval:4500,selected:"seleted",deriction:"left"});
+
+        });
+    </script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
