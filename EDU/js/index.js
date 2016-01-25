@@ -8,23 +8,23 @@ $(function(){
 	setTimeout(function(){
 		$(".barwrapper").slideUp();
 	},2000)
-	//轮播代码
-	//获取窗口可视化宽度
+	// 轮播代码
+	// 获取窗口可视化宽度
 	var imgwidth=$(window).width();
 	$(".lunbo img").css({"width":imgwidth});
 	$(".point_wrapper").css({"width":imgwidth});
 	var temp=1;
-	setInterval(function(){
-		if(parseInt($(".lunbo_img_wrapper").css("left"))==-2*imgwidth){
-			$(".lunbo_img_wrapper").css({"left":"0px"});
-		}else{
-			$(".lunbo_img_wrapper").css({"left":"-="+imgwidth});		}
-		var point_index=temp%3;
-		var point=$(".point span");
-		$(point[point_index]).addClass('select');
-		$(point[point_index]).siblings().removeClass('select');
-		temp++;
-	},5000);
+	// setInterval(function(){
+	// 	if(parseInt($(".lunbo_img_wrapper").css("left"))==-2*imgwidth){
+	// 		$(".lunbo_img_wrapper").css({"left":"0px"});
+	// 	}else{
+	// 		$(".lunbo_img_wrapper").css({"left":"-="+imgwidth});		}
+	// 	var point_index=temp%3;
+	// 	var point=$(".point span");
+	// 	$(point[point_index]).addClass('select');
+	// 	$(point[point_index]).siblings().removeClass('select');
+	// 	temp++;
+	// },5000);
 	// $(".point span").click(function(){
 	// 	var index=$(this).attr("data");
 	// 	console.log(imgwidth);
@@ -88,13 +88,44 @@ $(function(){
 	}
 	})
 	// 淡入淡出的轮播效果
+	lunbo();
 	function lunbo(){
 		var index=0;
 		var timer="";
-		function show(num){
+		show(index);
+             //鼠标移入移出导航
+             $(".point span").hover(function () {
+                clearTimeout(timer);
+                var icon=$(this).attr("data");
+                $(".point span").removeClass("select").eq(icon).addClass("select");
+                $(".lunbo_img_wrapper img").hide().stop(true,true).eq(icon).fadeIn("500");
+             }, function () {
+                index=$(this).attr("data")> 1 ? 1 :parseInt($(this).attr("data"))+1;
+                timer = setTimeout(function(){
+                	show(index);
+                }, 4000);
+             });
+        function show(num){
 			index=num;
+			$(".point span").removeClass("select").eq(index).addClass("select");
+			$(".lunbo_img_wrapper img").hide().stop(true,true).eq(index).fadeIn("500");
+			index = index + 1 > 2 ? 0 : index+1;
+             timer = setTimeout(function(){
+                show(index);
+             }, 4000);
 		}
+		// 鼠标移到图片暂停
+		$(".lunbo_img_wrapper img").hover(function() {
+			/* Stuff to do when the mouse enters the element */
+			 clearTimeout(timer);
+
+		}, function() {
+			/* Stuff to do when the mouse leaves the element */
+			timer = setTimeout(function(){
+                show(index);
+             }, 2000);
+		});
 	}
-	
+ 	
 })
 
