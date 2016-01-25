@@ -87,6 +87,14 @@ $(function(){
 		$(".leftbar").hide();
 	}
 	})
+	// 淡入淡出的轮播效果
+	function lunbo(){
+		var index=0;
+		var timer="";
+		function show(num){
+			index=num;
+		}
+	}
 	
 })
 

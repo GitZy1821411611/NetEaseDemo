@@ -99,3 +99,4 @@
 		.leftbar ul li a.a_mail{background: url(../img/top.png);background-position: 0px -50px;}
 		.leftbar ul li a.a_qq{background: url(../img/top.png);background-position: 0px -100px;}
 		.leftbar ul li a.a_share{background: url(../img/top.png);background-position: 0px -150px;}
+		.focus{display: inline-block;width: 54px;height: 21px;vertical-align: middle;background-image: url(../img/focus.png);margin-left: 15px;cursor: pointer;}
