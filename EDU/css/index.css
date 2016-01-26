@@ -71,8 +71,8 @@
 		.tab a.tab_select{background-image: url(../img/course_tab.png);background-position: 0px 0px;color: white;}
 		.course_detail{font-size: 12px;}
 		.course_detail:hover{color: #39a030;}
-		.num{width: 38px;border: 1px solid #666666;font-size: 12px;color: #666666;text-align: center;}
-		.price{font-size: 12px;color: #666666;padding: 2px;}
+		.num{width: 38px;font-size: 12px;color: #666666;text-align: center;background-image: url(../img/price.png);height: 18px;text-align: right;padding-right: 3px}
+		.price{font-size: 12px;color: red;padding: 2px;font-weight: bold;}
 		.singlecourse{background-color: white;width: 223px;padding: 1px;margin: 0px 20px 20px 0px;
 		float: left;
 		}
@@ -92,6 +92,7 @@
 		.footer_main .big{float: left;}
 		.footertitle{margin-bottom: 10px;}
 		.company,.lianjie,.we,.more{width:210px;margin: 32px;}
+		.pic{background-image: url(../img/footer_logo.png);width:234px;height: 23px;margin-bottom: 23px;}
 		.leftbar{position: fixed;bottom: 15px;right: 104px;display: none;}
 		.leftbar ul{list-style: none;}
 		.leftbar ul li a{display: block;background-color: red;width: 50px;height: 50px;margin-bottom: 2px;}

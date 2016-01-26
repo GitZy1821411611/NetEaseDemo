@@ -125,6 +125,21 @@ $(function(){
                 show(index);
              }, 2000);
 		});
+		//ajax请求数据
+			//懒加载
+			var html="";
+				$.getJSON("php/data.json",function(data){
+					$.each(data.list,function(index,element){
+						html+='<div class="singlecourse"><div class="img"><a href="javascipt:void(0)"><img src="img/Bitmap.png"/></a></div><p class="course_detail">'
+                             +element.name+'</p><p class="detail">音频帮</p><div class="personnum"><p class="num">'+element.learnerCount+'</p></div><div class="price">'
+                             +"￥"+element.price+'</div></div>'
+                        // $(".singlecourse .img a img").attr("src")=element.middlePhotoUrl;
+					})
+				console.log(html);
+				$(".tab").after(html);
+				});
+			
+			
 	}
  	
 })
