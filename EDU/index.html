@@ -120,16 +120,7 @@
 							<p class="video_detail">
 							观看下面的视频来了解吧:
 						</p>
-						<video controls="controls" controls="controls" width="180px" height="110px"  autoplay="autoplay ">
-							<source src="video/video.mp4" type="video/mp4"></source>
-							<!-- <source src="video/video.ogg" type="video/ogg"></source>
-							<source src="video/video.webm" type="video/webm"></source> -->
-							<object width="180px" height="110px" type="application/x-shockwave-flash" data="myvideo.swf">
-								<param name="movie" value="myvideo.swf" />
-								<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
-							</object>
-							当前浏览器不支持 video直接播放，点击这里下载视频： <a href="video.mp4">下载视频</a>
-						</video>
+						<img src="img/video_post.png" alt="">
 						</div>
 						</div>
 					
@@ -220,6 +211,15 @@
 					<li><a href="javascript:void(0)" class="a_qq"></a></li>
 					<li><a href="javascript:void(0)" class="a_share"></a></li>
 				</ul>
+			</div>
+			<div class="mask">
+				<div class="playvideowrapper">
+					<div class="playvideo">
+					<video src="video/video.mp4" controls="controls">Not support Html5
+					</video>
+					<a href="javacript:void(0)">close</a>
+				</div>
+				</div>	
 			</div>
 	</body>
 </html>

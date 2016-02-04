@@ -141,6 +141,13 @@ $(function(){
 			
 			
 	}
+	// 视频播放逻辑
+	$(".showvideo img").click(function(){
+		$(".mask").show();
+	})
+	$(".mask .playvideowrapper .playvideo a").click(function(){
+		$(".mask").hide();
+	})
  	
 })
 
