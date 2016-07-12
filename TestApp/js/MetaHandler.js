@@ -197,6 +197,6 @@
   }();
 
   // 调用自适应屏幕的功能函数
-  opt.fixViewportWidth(800);
+  opt.fixViewportWidth(1080);
 }();
 
