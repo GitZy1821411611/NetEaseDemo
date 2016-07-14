@@ -1,0 +1,37 @@
+*{
+	margin: 0.0rem;
+	padding: 0.0rem;
+}
+body{
+	background-color: #f1f1f1;
+}
+.top{
+	width: 100%;
+	height: 2.55rem;
+	background-color: red;
+}
+.top h2{
+	line-height: 2.55rem;
+	font-size: 1.0rem;
+	color: white;
+	text-align: center;
+}
+.showInfo{
+	width: 100%;
+	height: 5.9rem;
+	background-image: url("../img/543d5f0264aa5_06.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 auto;
+}
+.pduList{
+	width: 18.6rem;
+	height: 4.075rem;
+	padding: 0.4rem;
+	margin: 0.25rem auto;
+	background-color: white;
+}
+.pduList img{
+	width: 6.3rem;
+	height: 4.05rem;
+}
