@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<title>velocity动画演示</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				list-style-type: none;
+			}
+			
+			body {
+				font: 14px "Microsoft Yahei";
+				overflow-x: hidden;
+			}
+			
+			h1 {
+				width: 900px;
+				margin: 40px auto 50px;
+				font: 32px "Microsoft Yahei";
+				text-align: center;
+			}
+			
+			h2 {
+				font: 96px "Microsoft Yahei";
+				font-weight: 500;
+				text-align: center;
+				color: #f35626;
+				height: 127px;
+			}
+			
+			.wrap {
+				margin-bottom: 40px;
+			}
+			
+			.wrap p {
+				margin-bottom: 100px;
+				font: 30px "Microsoft Yahei";
+				text-align: center;
+				color: #999;
+			}
+			
+			.list {
+				width: 1000px;
+				margin: 0 auto;
+			}
+			
+			dl {
+				width: 1000px;
+				margin: 10px auto;
+				overflow: hidden;
+			}
+			
+			dt {
+				float: left;
+				width: 1000px;
+				padding: 5px 0;
+				border-bottom: 1px solid #ddd;
+				font-weight: 700;
+			}
+			
+			dd {
+				float: left;
+				margin: 10px 10px 0 0;
+				padding: 5px 10px;
+				background-color: #eee;
+				cursor: pointer;
+			}
+			
+			.dowebok-explain {
+				display: none;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 14px;
+				text-align: center;
+				color: #f50;
+			}
+			
+			.tab {
+				width: 1000px;
+				margin: 0 auto;
+				border: 1px solid #ddd;
+			}
+			
+			.tabNav {
+				padding-bottom: 10px;
+				overflow: hidden;
+				zoom: 1;
+				background-color: #f5f5f5;
+			}
+			
+			.tabNav li {
+				float: left;
+				margin: 10px 0 0 10px;
+				display: inline;
+			}
+			
+			.tabNav a {
+				float: left;
+				padding: 5px 10px;
+				color: #444;
+				text-decoration: none;
+			}
+			
+			.tabNav .active a {
+				color: #fff;
+				background-color: #f35626;
+			}
+			
+			.tabPane {
+				display: none;
+				overflow: hidden;
+				zoom: 1;
+			}
+			.tabPane li:hover{
+				background-color: #f35626;
+				color: white;
+			}
+
+			.tabCnt .active {
+				display: block;
+			}
+			
+			.tabCnt {
+				padding: 10px 20px 20px;
+			}
+			
+			.tabPane li {
+				float: left;
+				margin: 10px 10px 0 0;
+				padding: 5px 10px;
+				background-color: #eee;
+				cursor: pointer;
+			}
+			
+			.tabPane .active {
+				color: #f35626;
+			}
+			
+			#animate img {
+				width: 400px;
+				height: 400px;
+			}
+			
+			#warn {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>velocity动画演示</h1>
+		<div class="wrap">
+			<h2 id="animate">
+		Velocity
+	</h2>
+			<p>——velocity动画库</p>
+			<p id="warn">您的浏览器不支持animate属性，请更换高级浏览器，推荐chrome。</p>
+		</div>
+
+		<div class="tab">
+			<ul class="tabNav">
+				<li class="active">
+					<a href="javascript:void(0)">callout</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">transition</a>
+				</li>
+			</ul>
+			<div class="tabCnt">
+				<ul class="tabPane active">
+					<li>callout.bounce</li>
+					<li>callout.shake</li>
+					<li>callout.flash</li>
+					<li>callout.pulse</li>
+					<li>callout.swing</li>
+					<li>Callout.tada</li>
+				</ul>
+
+				<ul class="tabPane">
+					<li>transition.fadeIn</li>
+					<li>transition.fadeOut</li>
+					<li>transition.flipXIn</li>
+					<li>transition.flipXOut</li>
+					<li>transition.flipYIn</li>
+					<li>transition.flipYOut</li>
+					<li>transition.flipBounceXIn</li>
+					<li>transition.flipBounceXOut</li>
+					<li>transition.flipBounceYIn</li>
+					<li>transition.flipBounceYOut</li>
+					<li>transition.swoopIn</li>
+					<li>transition.swoopOut</li>
+					<li>transition.whirlIn</li>
+					<li>transition.whirlOut</li>
+					<li>transition.shrinkIn</li>
+					<li>transition.shrinkOut</li>
+					<li>transition.expandIn</li>
+					<li>transition.expandOut</li>
+					<li>transition.bounceIn</li>
+					<li>transition.bounceOut</li>
+					<li>transition.bounceUpIn</li>
+					<li>transition.bounceUpOut</li>
+					<li>transition.bounceDownIn</li>
+					<li>transition.bounceDownOut</li>
+					<li>transition.bounceLeftIn</li>
+					<li>transition.bounceLeftOut</li>
+					<li>transition.bounceRightIn</li>
+					<li>transition.bounceRightOut</li>
+					<li>transition.slideUpIn</li>
+					<li>transition.slideUpOut</li>
+					<li>transition.slideDownIn</li>
+					<li>transition.slideDownOut</li>
+					<li>transition.slideLeftIn</li>
+					<li>transition.slideLeftOut</li>
+					<li>transition.slideRightIn</li>
+					<li>transition.slideRightOut</li>
+					<li>transition.slideUpBigIn</li>
+					<li>transition.slideUpBigOut</li>
+					<li>transition.slideDownBigIn</li>
+					<li>transition.slideDownBigOut</li>
+					<li>transition.slideLeftBigIn</li>
+					<li>transition.slideLeftBigOut</li>
+					<li>transition.slideRightBigIn</li>
+					<li>transition.slideRightBigOut</li>
+					<li>transition.perspectiveUpIn</li>
+					<li>transition.perspectiveUpOut</li>
+					<li>transition.perspectiveDownIn</li>
+					<li>transition.perspectiveDownOut</li>
+					<li>transition.perspectiveLeftIn</li>
+					<li>transition.perspectiveLeftOut</li>
+					<li>transition.perspectiveRightIn</li>
+					<li>transition.perspectiveRightOut</li>
+				</ul>
+			</div>
+		</div>
+		<p class="vad">
+			<a href="http://www.95zhangye.site/" target="_blank">95zhangye.site</a>
+			<a href="http://www.95zhangye.site/" target="_blank">说 明</a>
+			<a href="http://www.95zhangye.site/" target="_blank">下 载</a>
+		</p>
+		<style>
+			.vad {
+				margin: 50px 0 5px;
+				font-family: Consolas, arial, 宋体;
+				text-align: center;
+			}
+			
+			.vad a {
+				display: inline-block;
+				height: 36px;
+				line-height: 36px;
+				margin: 0 5px;
+				padding: 0 50px;
+				font-size: 14px;
+				text-align: center;
+				color: #eee;
+				text-decoration: none;
+				background-color: #222;
+			}
+			
+			.vad a:hover {
+				color: #fff;
+				background-color: #000;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+		<script type="text/javascript" src="../js/velocity.min.js"></script>
+		<script type="text/javascript" src="../js/velocity.ui.min.js"></script>
+		<script>
+			tabNav();
+			Velocity();
+
+			function tabNav() {
+				$(".tabNav").find("li").bind("click", function() {
+					$(this).siblings().removeClass("active");
+					$(this).addClass("active");
+					var index = $(this).index();
+					$(".tabCnt").find("ul").eq(index).siblings().removeClass("active");
+					$(".tabCnt").find("ul").eq(index).addClass("active");
+				})
+			}
+
+			function Velocity() {
+				$(".tabPane").find("li").bind("click", function() {
+					var name = $(this).text();
+					$("#animate").velocity(name);
+				})
+			}
+		</script>
+
+		<script type="text/javascript">
+			var browser = navigator.appName
+			var b_version = navigator.appVersion
+			var version = b_version.split(";");
+			var trim_Version = version[1].replace(/[ ]/g, "");
+			if(browser == "Microsoft Internet Explorer" && trim_Version == "MSIE6.0") {
+				$("#warn").show();
+			} else if(browser == "Microsoft Internet Explorer" && trim_Version == "MSIE7.0") {
+				$("#warn").show();
+			} else if(browser == "Microsoft Internet Explorer" && trim_Version == "MSIE8.0") {
+				$("#warn").show();
+			}
+		</script>
+	</body>
+
+</html>

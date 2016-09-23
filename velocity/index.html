@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>11</title>
+		<style>
+			div {
+				width: 100px;
+				height: 100px;
+			}
+			
+			.jq {
+				background: red;
+				position: relative;
+			}
+			
+			.ve {
+				background: black;
+				position: relative;
+			}
+		</style>
+	</head>
+
+	<body>
+		<buton>
+			开始
+		</buton>
+		<div class="jq" id="div2">
+
+		</div>
+		<div class="ve" id="div1">
+
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script type="text/javascript" src="js/velocity.ui.min.js" ></script>
+	<script>
+	$("#div1").hover(function(){
+		$(this).velocity('transition.fadeOut');
+	},function(){
+		
+	})
+//		var seq = [
+//
+//			　　　　{
+//
+//				　　　　　　
+//				elements: $('#div1'),
+//
+//				　　　　　　properties: {
+//					width: '300px'
+//				},
+//
+//				　　　　　　options: {
+//					duration: 1000
+//				}
+//
+//				　　　　
+//			},
+//
+//			　　　　 {
+//
+//				　　　　　　
+//				elements: $('#div1'),
+//
+//				　　　　　　properties: {
+//					height: '300px'
+//				},
+//
+//				　　　　　　options: {
+//					duration: 1000
+//				}
+//
+//				　　　　
+//			},
+//
+//			　　　　 {
+//
+//				　　　　　　
+//				elements: $('#div1'),
+//
+//				　　　　　　properties: {
+//					width: '100px'
+//				},
+//
+//				　　　　　　options: {
+//					duration: 1000
+//				}
+//
+//				　　　　
+//			},
+//			 {
+//
+//				　　　　　　
+//				elements: $('#div2'),
+//
+//				　　　　　　properties: {
+//					width: '300px',
+//					left:"100px"
+//				},
+//
+//				　　　　　　options: {
+//					duration: 1000
+//				}
+//
+//				　　　　
+//			}
+//			　　
+//		];
+//		$.Velocity.RunSequence(seq);
+
+	</script>
+
+</html>
