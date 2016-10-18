@@ -1,0 +1,25 @@
+(function($){
+	var index={
+		init:function(){
+			this.main();
+		},
+		main:function(){
+			$("#qiehuan").find("li").eq(0).bind("click",function(){
+				$("#frame").attr("width","1200");
+				$(this).siblings().removeClass("on");
+				$(this).addClass("on");
+			});
+			$("#qiehuan").find("li").eq(1).bind("click",function(){
+				$("#frame").attr("width","1024");
+				$(this).siblings().removeClass("on");
+				$(this).addClass("on");
+			});
+			$("#qiehuan").find("li").eq(2).bind("click",function(){
+				$("#frame").attr("width","480");
+				$(this).siblings().removeClass("on");
+				$(this).addClass("on");
+			});
+		}
+	};
+	index.init();
+})(jQuery)

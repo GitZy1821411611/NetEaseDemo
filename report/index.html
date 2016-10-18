@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<title>fullPage.js — 基本演示_dowebok</title>
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" href="http://cdn.dowebok.com/77/css/jquery.fullPage.css">
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			iframe {
+				border: 0px;
+			}
+			
+			.cf {
+				zoom: 1;
+			}
+			
+			.cf:after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			
+			.section {
+				text-align: center;
+				font: 50px "Microsoft Yahei";
+				color: #fff;
+			}
+			
+			.fp-controlArrow.fp-next {
+				right: 50px;
+			}
+			
+			.fp-controlArrow.fp-prev {
+				left: 50px;
+			}
+			
+			.fp-tableCell {
+				display: block;
+			}
+			
+			h3 {
+				margin-top: 0px;
+				margin-bottom: 160px;
+			}
+			
+			.index-h3 {
+				height: 450px;
+				background-color: #01BAE6;
+				line-height: 450px;
+			}
+			
+			.content {
+				color: #222;
+			}
+			
+			.content p {
+				font-family: "宋体";
+				font-size: 32px;
+				font-weight: bold;
+				margin: 20px 0px;
+			}
+			
+			.section-main {
+				width: 1000px;
+				margin: 0 auto;
+				margin-top: 250px;
+			}
+			
+			.section {
+				background-image: url(img/bg1.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			
+			.section-header {
+				width: 100%;
+				height: 100px;
+				background-color: #01BAE6;
+				line-height: 100px;
+				text-align: left;
+				text-indent: 2em;
+			}
+			
+			.imgwrap {
+				width: 200px;
+				text-align: center;
+				font-size: 24px;
+				color: black;
+				float: left;
+				margin-right: 50px;
+			}
+			
+			.sup {
+				font-size: 18px;
+				color: #555;
+				margin-top: 10px;
+			}
+			
+			.common {
+				color: #02B9E7;
+				height: 400px;
+				position: absolute;
+				top: 50%;
+				margin-top: -200px;
+				left: 220px;
+				line-height: 400px;
+				font-size: 64px;
+			}
+			
+			.common-img {
+				float: left;
+				font-size: 0px;
+			}
+			
+			.common-img img {
+				height: 400px;
+			}
+			
+			.img-content {
+				float: left;
+				margin-left: 100px;
+			}
+			
+			.img-content-c {
+				float: left;
+			}
+			
+			.jiantou {
+				float: left;
+				margin-top: 25px;
+				margin-left: 150px;
+			}
+			
+			.zhize-img {
+				width: 1138px;
+				height: 528px;
+				position: relative;
+				top: 50%;
+				left: 50%;
+				margin-top: -366px;
+				margin-left: -569px;
+			}
+			
+			.sp {
+				text-align: center;
+				text-indent: inherit;
+			}
+			
+			.slide-main {
+				width: 1700px;
+				height: 100px;
+				margin: 0 auto;
+			}
+			
+			.show {
+				float: left;
+			}
+			
+			.show-content {
+				box-sizing: border-box;
+				float: right;
+				color: #222222;
+				font-size: 24px;
+				margin-top: 200px;
+			}
+			
+			.qiehuan ul li {
+				list-style: none;
+				/*width: 100px;*/
+				height: 50px;
+				float: left;
+				margin: 10px;
+				cursor: pointer;
+			}
+			
+			.qiehuan ul li:hover {
+				color: red;
+			}
+			
+			.qiehuan ul li.on {
+				color: red;
+			}
+			
+			.section-learning {
+				width: 1097px;
+				height: 567px;
+				position: relative;
+				margin: 0 auto;
+				margin-top: 100px;
+				left: -50px;
+			}
+			
+			.youshi {
+				margin-top: 200px;
+			}
+			.end{
+				width: 100%;
+				height: 400px;
+				background-color:#01BAE6 ;
+				text-align: center;
+				position: absolute;
+				left: 0px;
+				top:50%;
+				margin-top: -200px;
+				line-height: 400px;
+			}
+			.end img{
+				vertical-align: middle;
+			}
+		</style>
+		<!--<script type="text/javascript" src="js/fullPage.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>-->
+		<script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://cdn.dowebok.com/77/js/jquery.fullPage.min.js"></script>
+		<script>
+			$(function() {
+				$('#dowebok').fullpage({
+					afterLoad: function(anchorLink, index) {
+						if(index == 2) {
+							$("#f").addClass("animated wobble");
+
+						}
+					},
+					onLeave: function(index, nextIndex, direction) {
+						if(direction == "up") {
+							$("#f").removeClass("animated wobble");
+						}
+					},
+					navigation: false
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="dowebok">
+			
+			<div class="section">
+				<h3 class="index-h3">个人述职报告</h3>
+				<div class="content">
+					<p>姓名：张烨</p>
+					<p>部门：MIC-UED</p>
+					<p>职位：前端开发</p>
+					<p>时间：2016-10-20</p>
+				</div>
+			</div>
+			<div class="section">
+				<div class="section-header">
+					<p class="title">目录</p>
+				</div>
+				<div class="section-main cf">
+					<div class="imgwrap">
+						<div class="img">
+							<img src="img/hugong.png" alt="" />
+						</div>
+
+						<p>工作回顾</p>
+						<p class="sup">谈近来的工作情况</p>
+					</div>
+					<div class="imgwrap">
+						<div class="img">
+							<img src="img/pingjia.png" alt="" />
+						</div>
+
+						<p>自我评价</p>
+						<p class="sup">对本人和工作都可以评价</p>
+					</div>
+					<div class="imgwrap">
+						<div class="img">
+							<img src="img/tihui.png" alt="" />
+						</div>
+						<p>工作体会</p>
+						<p class="sup">谈工作感想领悟、体会</p>
+					</div>
+					<div class="imgwrap">
+						<div class="img">
+							<img src="img/zhanwang.png" alt="" />
+						</div>
+						<p>工作规划和展望</p>
+						<p class="sup">谈下一步工作计划或长远职业规划</p>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="slide">
+					<div class="common cf">
+						<div class="common-img">
+							<img src="img/common.png" alt="" />
+						</div>
+						<div class="img-content">
+
+							<p class="img-content-c">
+								工作回顾
+							</p>
+							<p class="jiantou">
+								<img src="img/图片2.png" />
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header">
+						<p class="title">工作岗位及职责</p>
+					</div>
+					<div class="zhize-img">
+						<img src="img/zhize.png" alt="" />
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header sp ">
+						<p class="title">虚拟展会一期开发</p>
+					</div>
+					<div class="slide-main cf">
+						<div class="show">
+							<div class="iframe-wrap" style="width: 1200px;">
+								<img src="img/new-w-1.jpg" alt="" />
+								<img src="img/new-w-1-cell.jpg" alt="" />
+							</div>
+						</div>
+						<div class="show-content">
+							<img src="img/c-1.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header sp">
+						<p class="title">虚拟展会二期开发</p>
+					</div>
+					<div class="slide-main cf">
+						<div class="show">
+							<div class="iframe-wrap" style="width: 1200px;">
+								<iframe frameborder="0" src="http://www.made-in-china.com/expo/intermot/intro" width="100%" height="800" style="margin-top: 10px;" id="frame"></iframe>
+							</div>
+						</div>
+						<div class="show-content">
+							<div class="qiehuan">
+								<ul class="cf" id="qiehuan">
+									<li class="on">PC端</li>
+									<li>Pad端</li>
+									<li>Phone端</li>
+								</ul>
+							</div>
+							<img src="img/c-2.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header sp">
+						<p class="title">虚拟展会二期开发</p>
+					</div>
+					<div class="slide-main cf">
+						<div class="show">
+							<div class="iframe-wrap" style="width: 1200px;">
+								<iframe frameborder="0" src="http://www.made-in-china.com/expo/exhibition-footprint" width="100%" height="800" style="margin-top: 10px;" id="frame"></iframe>
+							</div>
+						</div>
+						<div class="show-content">
+							<div class="qiehuan">
+								<ul class="cf" id="qiehuan">
+									<li class="on">PC端</li>
+									<!--<li>Pad端</li>
+							  		<li>Phone端</li>-->
+								</ul>
+							</div>
+							<img src="img/c-3.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header sp">
+						<p class="title">虚拟展会二期开发</p>
+					</div>
+					<div class="slide-main cf">
+						<div class="show">
+							<div class="iframe-wrap" style="width: 1200px;">
+								<iframe frameborder="0" src="http://www.made-in-china.com/expo/feedback" width="100%" height="800" style="margin-top: 10px;" id="frame"></iframe>
+							</div>
+						</div>
+						<div class="show-content">
+							<div class="qiehuan">
+								<ul class="cf" id="qiehuan">
+									<li class="on">PC端</li>
+									<!--<li>Pad端</li>
+							  		<li>Phone端</li>-->
+								</ul>
+							</div>
+							<img src="img/c-4.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header sp">
+						<p class="title">运营邮件制作</p>
+					</div>
+					<div class="slide-main cf">
+						<div class="show">
+							<div class="iframe-wrap" style="width: 1200px;">
+								<iframe frameborder="0" src="http://edm.made-in-china.com/MICEN/2016/09/3790.htm" width="100%" height="800" style="margin-top: 10px;" id="frame"></iframe>
+							</div>
+						</div>
+						<div class="show-content">
+							<div class="qiehuan">
+								<ul class="cf" id="qiehuan">
+									<li class="on">PC端</li>
+									<!--<li>Pad端</li>
+							  		<li>Phone端</li>-->
+								</ul>
+							</div>
+							<img src="img/y-1.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header sp">
+						<p class="title">运营邮件制作</p>
+					</div>
+					<div class="slide-main cf">
+						<div class="show">
+							<div class="iframe-wrap" style="width: 1200px;">
+								<iframe frameborder="0" src="libs/pic/index.html" width="100%" height="800" style="margin-top: 10px;" id="frame"></iframe>
+							</div>
+						</div>
+						<div class="show-content">
+							<img src="img/mail.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="section-header">
+					<p class="title">自主学习情况</p>
+				</div>
+				<div class="section-learning cf">
+					<img src="img/learning.png" />
+				</div>
+			</div>
+			<div class="section">
+				<div class="slide">
+					<div class="common cf">
+						<div class="common-img">
+							<img src="img/mypingjia.png" alt="" />
+						</div>
+						<div class="img-content">
+							<p class="img-content-c">
+								自我评价
+							</p>
+							<p class="jiantou">
+								<img src="img/图片2.png" />
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header">
+						<p class="title">我的优势</p>
+					</div>
+					<div class="section-learning cf youshi">
+						<img src="img/youshi.png" />
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header">
+						<p class="title">我的劣势</p>
+					</div>
+					<div class="section-learning cf youshi">
+						<img src="img/lieshi.png" />
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header">
+						<p class="title">信条</p>
+					</div>
+					<div class="section-learning cf youshi">
+						<img src="img/xintiao.png" />
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="slide">
+					<div class="common cf">
+						<div class="common-img">
+							<img src="img/big-tihui.png" alt="" />
+						</div>
+						<div class="img-content">
+							<p class="img-content-c">
+								工作体会
+							</p>
+							<p class="jiantou">
+								<img src="img/图片2.png" />
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header">
+						<p class="title">工作心得</p>
+					</div>
+					<div class="section-learning cf youshi">
+						<img src="img/xinde.png" />
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="slide">
+					<div class="common cf">
+						<div class="common-img">
+							<img src="img/guihua.png" alt="" />
+						</div>
+						<div class="img-content">
+							<p class="img-content-c">
+								工作规划
+							</p>
+							<p class="jiantou">
+								<img src="img/图片2.png" />
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header">
+						<p class="title">下一步的工作计划</p>
+					</div>
+					<div class="section-learning cf ">
+						<img src="img/jihua.png" />
+					</div>
+				</div>
+				<div class="slide">
+					<div class="section-header">
+						<p class="title">下一步的工作计划</p>
+					</div>
+					<div class="section-learning cf ">
+						<img src="img/jihua2.png" />
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="end">
+					<img src="img/end.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
+</html>
