@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="global.css" />
+		<style>
+		.fmt pre code{
+			font-size: 2em;
+		}
+		body{
+			padding-top: 60px;
+		}
+		</style>
+	</head>
+
+	<body class="container ">
+		<div class="article fmt article__content" data-id="1190000002957434" data-license="cc">
+
+			<h2 id="articleHeader0">例子1</h2>
+
+			
+			<div class="widget-codetool" style="display: block;">
+		
+			</div><pre><code class="javascript"><span class="hljs-keyword">var</span> test = (<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"test func"</span>);
+    <span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">console</span>.log(i);
+        <span class="hljs-keyword">return</span> i++;
+    }
+})();
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"........"</span>);
+test();     <span class="hljs-comment">//0</span>
+test();     <span class="hljs-comment">//1</span>
+test();     <span class="hljs-comment">//2</span>
+
+<span class="hljs-comment">// output</span>
+<span class="hljs-comment">// test func</span>
+<span class="hljs-comment">// ........</span>
+<span class="hljs-comment">// 0</span>
+<span class="hljs-comment">// 1</span>
+<span class="hljs-comment">// 2</span>
+</code></pre>
+
+			<h2 id="articleHeader1">例子2</h2>
+
+			
+			<div class="widget-codetool" style="display: none;">
+				<div class="widget-codetool--inner">
+					<span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
+					<span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="var test = function () {
+    console.log(&quot;test func&quot;);
+    var i = 0;
+    return function () {
+        console.log(i);
+        return i++;
+    }
+};
+
+console.log(&quot;........&quot;);
+var a = test();
+a();    //0
+a();    //1
+a();    //2
+
+var b = test()
+b();    //0
+
+// output
+// ........
+// test func
+// 0
+// 1
+// 2
+// test func
+// 0
+" title="" data-original-title="复制"></span>
+					<span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
+				</div>
+			</div><pre><code class="javascript"><span class="hljs-keyword">var</span> test = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"test func"</span>);
+    <span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+        <span class="hljs-built_in">console</span>.log(i);
+        <span class="hljs-keyword">return</span> i++;
+    }
+};
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"........"</span>);
+<span class="hljs-keyword">var</span> a = test();
+a();    <span class="hljs-comment">//0</span>
+a();    <span class="hljs-comment">//1</span>
+a();    <span class="hljs-comment">//2</span>
+
+<span class="hljs-keyword">var</span> b = test()
+b();    <span class="hljs-comment">//0</span>
+
+<span class="hljs-comment">// output</span>
+<span class="hljs-comment">// ........</span>
+<span class="hljs-comment">// test func</span>
+<span class="hljs-comment">// 0</span>
+<span class="hljs-comment">// 1</span>
+<span class="hljs-comment">// 2</span>
+<span class="hljs-comment">// test func</span>
+<span class="hljs-comment">// 0</span>
+</code></pre>
+
+			<h2 id="articleHeader2">例子3</h2>
+
+			
+			<div class="widget-codetool" style="display: none;">
+				<div class="widget-codetool--inner">
+					<span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
+					<span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="var arr = [1, 2, 3];
+var obj = {};
+
+var test = function () {
+    for (var i=0; i<arr.length; i++) {
+        obj[i] = function () {
+            console.log(i);
+        };
+    }
+}
+
+test();
+
+var fn0 = obj[0];
+var fn1 = obj[1];
+var fn2 = obj[2];
+
+fn0();   //3
+fn1();   //3
+fn2();   //3
+" title="" data-original-title="复制"></span>
+					<span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
+				</div>
+			</div><pre><code class="javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<span class="hljs-keyword">var</span> obj = {};
+
+<span class="hljs-keyword">var</span> test = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>; i&lt;arr.length; i++) {
+        obj[i] = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+            <span class="hljs-built_in">console</span>.log(i);
+        };
+    }
+}
+
+test();
+
+<span class="hljs-keyword">var</span> fn0 = obj[<span class="hljs-number">0</span>];
+<span class="hljs-keyword">var</span> fn1 = obj[<span class="hljs-number">1</span>];
+<span class="hljs-keyword">var</span> fn2 = obj[<span class="hljs-number">2</span>];
+
+fn0();   <span class="hljs-comment">//3</span>
+fn1();   <span class="hljs-comment">//3</span>
+fn2();   <span class="hljs-comment">//3</span>
+</code></pre>
+
+			
+			<div class="widget-codetool" style="display: none;">
+				<div class="widget-codetool--inner">
+					<span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
+					<span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="var arr = [1, 2, 3];
+var obj = {};
+
+var test = function () {
+    for (var i=0; i<arr.length; i++) {
+        (function (i) {
+            obj[i] = function () {
+                console.log(i);
+            };
+        })(i);  //i作为参数传给立即调用函数
+    }
+};
+
+test();
+
+var fn0 = obj[0];
+var fn1 = obj[1];
+var fn2 = obj[2];
+
+fn0();   //0
+fn1();   //1
+fn2();   //2
+" title="" data-original-title="复制"></span>
+					<span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
+				</div>
+			</div><pre><code class="javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<span class="hljs-keyword">var</span> obj = {};
+
+<span class="hljs-keyword">var</span> test = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>; i&lt;arr.length; i++) {
+        (<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(i)</span> </span>{
+            obj[i] = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-built_in">console</span>.log(i);
+            };
+        })(i);  <span class="hljs-comment">//i作为参数传给立即调用函数</span>
+    }
+};
+
+test();
+
+<span class="hljs-keyword">var</span> fn0 = obj[<span class="hljs-number">0</span>];
+<span class="hljs-keyword">var</span> fn1 = obj[<span class="hljs-number">1</span>];
+<span class="hljs-keyword">var</span> fn2 = obj[<span class="hljs-number">2</span>];
+
+fn0();   <span class="hljs-comment">//0</span>
+fn1();   <span class="hljs-comment">//1</span>
+fn2();   <span class="hljs-comment">//2</span>
+</code></pre>
+
+			
+			<div class="widget-codetool" style="display: none;">
+				<div class="widget-codetool--inner">
+					<span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
+					<span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="var arr = [1, 2, 3];
+var obj = {};
+
+var test = function () {
+    for (var i=0; i<arr.length; i++) {
+        (function (i) {
+            obj[i] = function () {
+                console.log(i++);
+            };
+        })(i);  //i作为参数传给立即调用函数
+    }
+};
+
+test();
+
+var fn0 = obj[0];
+var fn1 = obj[1];
+var fn2 = obj[2];
+
+// 两次fn0()访问同一个内存中的i值
+fn0();  //0
+fn0();  //1
+
+// 两次fn1()访问同一个内存中的i值
+fn1();  //1
+fn1();  //2
+
+// 两次fn2()访问同一个内存中的i值
+fn2();  //2
+fn2();  //3
+" title="" data-original-title="复制"></span>
+					<span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
+				</div>
+			</div><pre><code class="javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<span class="hljs-keyword">var</span> obj = {};
+
+<span class="hljs-keyword">var</span> test = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>; i&lt;arr.length; i++) {
+        (<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(i)</span> </span>{
+            obj[i] = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-built_in">console</span>.log(i++);
+            };
+        })(i);  <span class="hljs-comment">//i作为参数传给立即调用函数</span>
+    }
+};
+
+test();
+
+<span class="hljs-keyword">var</span> fn0 = obj[<span class="hljs-number">0</span>];
+<span class="hljs-keyword">var</span> fn1 = obj[<span class="hljs-number">1</span>];
+<span class="hljs-keyword">var</span> fn2 = obj[<span class="hljs-number">2</span>];
+
+<span class="hljs-comment">// 两次fn0()访问同一个内存中的i值</span>
+fn0();  <span class="hljs-comment">//0</span>
+fn0();  <span class="hljs-comment">//1</span>
+
+<span class="hljs-comment">// 两次fn1()访问同一个内存中的i值</span>
+fn1();  <span class="hljs-comment">//1</span>
+fn1();  <span class="hljs-comment">//2</span>
+
+<span class="hljs-comment">// 两次fn2()访问同一个内存中的i值</span>
+fn2();  <span class="hljs-comment">//2</span>
+fn2();  <span class="hljs-comment">//3</span>
+</code></pre>
+
+			<h2 id="articleHeader3">例子4</h2>
+
+			<div class="widget-codetool" style="display: none;">
+				<div class="widget-codetool--inner">
+					<span class="selectCode code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="全选"></span>
+					<span type="button" class="copyCode code-tool" data-toggle="tooltip" data-placement="top" data-clipboard-text="var arr = [1, 2, 3];
+
+// 用来存放函数的数组
+var fns = [];
+
+var add = function () {
+    for (var i = 0; i < arr.length; i++) {
+        (function (i) {
+            // 把匿名函数push到fns中
+            fns.push(function () {
+                // 由于函数引用了上层作用域链的i，当被调用时i值不会被改变
+                console.log(arr[i]);
+            });
+        })(i);
+    }
+};
+
+// 遍历fns执行数组中的函数
+var start = function () {
+    for (var i = 0; i < fns.length; i++) {
+        // 执行fns中的匿名函数
+        fns[i]();
+    }
+};
+
+add();
+start();
+
+// output
+// 1
+// 2
+// 3
+" title="" data-original-title="复制"></span>
+					<span type="button" class="saveToNote code-tool" data-toggle="tooltip" data-placement="top" title="" data-original-title="放进笔记"></span>
+				</div>
+			</div><pre><code class="javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-comment">// 用来存放函数的数组</span>
+<span class="hljs-keyword">var</span> fns = [];
+
+<span class="hljs-keyword">var</span> add = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) {
+        (<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(i)</span> </span>{
+            <span class="hljs-comment">// 把匿名函数push到fns中</span>
+            fns.push(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-comment">// 由于函数引用了上层作用域链的i，当被调用时i值不会被改变</span>
+                <span class="hljs-built_in">console</span>.log(arr[i]);
+            });
+        })(i);
+    }
+};
+
+<span class="hljs-comment">// 遍历fns执行数组中的函数</span>
+<span class="hljs-keyword">var</span> start = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; fns.length; i++) {
+        <span class="hljs-comment">// 执行fns中的匿名函数</span>
+        fns[i]();
+    }
+};
+
+add();
+start();
+
+<span class="hljs-comment">// output</span>
+<span class="hljs-comment">// 1</span>
+<span class="hljs-comment">// 2</span>
+<span class="hljs-comment">// 3</span>
+</code></pre>
+
+		</div>
+	</body>
+
+</html>
